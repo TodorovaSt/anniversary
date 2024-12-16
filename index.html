@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper"> <!-- Removed "flap" class from here to keep the envelope closed by default -->
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dearest Riste</strong>
+                        <p>thank you for unforgettable 4 years. Being with you is my best decision made in these 23 years.</p>
+                        <p>Thanks for all moral, mental and physical support. Hoping we are growing and learning together, through mine and yours mistakes.</p>
+                        <p>Couldn't be here without you. Let the best come,</p>
+                        <p>truly yours S</p>
+                    </div>  
+                </div>    
+            </div>    
+            <div class="heart"></div>
+        </div>    
+
+        <!-- Falling Hearts -->
+        <div class="heart-fall"></div>
+        <div class="heart-fall"></div>
+        <div class="heart-fall"></div>
+        <div class="heart-fall"></div>
+        <div class="heart-fall"></div>
+    </div>  
+
+    <script>
+        // Open/close envelope on heart click
+        const envelope = document.querySelector('.envelope-wrapper');
+        const heart = document.querySelector('.heart');
+
+        heart.addEventListener('click', () => {
+            envelope.classList.toggle('flap');  // Toggle the 'flap' class to open/close the envelope
+        });
+    </script>
+</body>
+</html>
